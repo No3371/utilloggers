@@ -9,3 +9,13 @@ func (logger *SimpleLoggerF) LogF(format string, v ...interface{}) {
 		logger.LoggerF(format, v)
 	}
 }
+
+type SimpleLogger struct {
+	Logger func(v ...interface{})
+}
+
+func (logger *SimpleLogger) LogF(v ...interface{}) {
+	if logger.Logger != nil {
+		logger.Logger(v)
+	}
+}
