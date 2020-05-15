@@ -6,15 +6,19 @@ type SimpleLoggerF struct {
 
 func (logger *SimpleLoggerF) LogF(format string, v ...interface{}) {
 	if logger.LoggerF != nil {
-		logger.LoggerF(format, v)
+		if v == nil {
+			logger.LoggerF(format)
+		} else {
+			logger.LoggerF(format, v)
+		}
 	}
 }
 
 type SimpleLogger struct {
-	Logger func(v ...interface{})
+	Logger func(v string)
 }
 
-func (logger *SimpleLogger) LogF(v ...interface{}) {
+func (logger *SimpleLogger) LogF(v string) {
 	if logger.Logger != nil {
 		logger.Logger(v)
 	}
