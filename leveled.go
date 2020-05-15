@@ -19,7 +19,7 @@ func (logger *LeveledLoggerF) LogInfoF(format string, v ...interface{}) {
 	}
 }
 
-func (logger *LeveledLoggerF) LogSpamF(format string, v ...interface{}) {
+func (logger *LeveledLoggerF) LogMiscF(format string, v ...interface{}) {
 	if logger.MiscLoggerF != nil {
 		logger.MiscLoggerF(format, v)
 	}
