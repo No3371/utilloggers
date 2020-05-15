@@ -9,7 +9,7 @@ func (logger *SimpleLoggerF) LogF(format string, v ...interface{}) {
 		if v == nil {
 			logger.LoggerF(format)
 		} else {
-			logger.LoggerF(format, v)
+			logger.LoggerF(format, v...)
 		}
 	}
 }

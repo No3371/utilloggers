@@ -12,7 +12,7 @@ func (logger *LeveledLoggerF) LogErrorF(format string, v ...interface{}) {
 		if v == nil {
 			logger.ErrorLoggerF(format)
 		} else {
-			logger.ErrorLoggerF(format, v)
+			logger.ErrorLoggerF(format, v...)
 		}
 	}
 }
@@ -22,7 +22,7 @@ func (logger *LeveledLoggerF) LogInfoF(format string, v ...interface{}) {
 		if v == nil {
 			logger.InfoLoggerF(format)
 		} else {
-			logger.InfoLoggerF(format, v)
+			logger.InfoLoggerF(format, v...)
 		}
 	}
 }
@@ -32,7 +32,7 @@ func (logger *LeveledLoggerF) LogMiscF(format string, v ...interface{}) {
 		if v == nil {
 			logger.MiscLoggerF(format)
 		} else {
-			logger.MiscLoggerF(format, v)
+			logger.MiscLoggerF(format, v...)
 		}
 	}
 }
@@ -42,7 +42,7 @@ func (logger *LeveledLoggerF) LogSpamF(format string, v ...interface{}) {
 		if v == nil {
 			logger.SpamLoggerF(format)
 		} else {
-			logger.SpamLoggerF(format, v)
+			logger.SpamLoggerF(format, v...)
 		}
 	}
 }
