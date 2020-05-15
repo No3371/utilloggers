@@ -1,4 +1,4 @@
-package main
+package utilloggers
 
 type LeveledLoggerF struct {
 	InfoLoggerF  func(foramt string, v ...interface{})

@@ -1,6 +1,5 @@
 package utilloggers
 
-
 type SimpleLoggerF struct {
 	LoggerF func(foramt string, v ...interface{})
 }
@@ -10,4 +9,3 @@ func (logger *SimpleLoggerF) LogF(format string, v ...interface{}) {
 		logger.LoggerF(format, v)
 	}
 }
-
